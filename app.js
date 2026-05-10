@@ -192,7 +192,7 @@ function renderTicker() {
     '⏱️ 2-5 أيام عمل',
     '2-5 jours ouvrables',
     '🌿 Ênas Parfums — L\'Essence de Luxe',
-    '💛 4 عطور بـ 200 درهم فقط',
+    '💛 4 عطور بـ 220 درهم فقط',
   ];
   const double = [...items, ...items];
   track.innerHTML = double.map(i => `<span class="ticker-item">${i}</span>`).join('');
@@ -497,7 +497,7 @@ function submitOrder() {
 🛒 *العطور المختارة:*
 ${perfumesLine}
 ━━━━━━━━━━━━━━━━━━━━
-💰 المبلغ الإجمالي: *200 درهم*
+💰 المبلغ الإجمالي: *220 درهم*
 🎁 التوصيل: *مجاني* ✅
 📦 الدفع عند الاستلام
 ━━━━━━━━━━━━━━━━━━━━
