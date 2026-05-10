@@ -333,7 +333,7 @@ function updateCounter() {
     if (n === MAX) {
       setTimeout(() => {
         orderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 200);
+      }, 220);
     }
   }
 }
@@ -412,7 +412,7 @@ function buildOrderForm() {
       <div class="order-recap-title">${t('your_selection')}</div>
       <ul class="order-recap-list" id="recap-list"></ul>
       <div class="recap-total">
-        <span class="recap-price">200 <small style="font-size:1rem">${STATE.data.bundle.currency}</small></span>
+        <span class="recap-price">220 <small style="font-size:1rem">${STATE.data.bundle.currency}</small></span>
         <div class="recap-badges">
           <span class="recap-badge badge-green">🎁 ${lang === 'ar' ? 'توصيل مجاني' : 'Livraison gratuite'}</span>
           <span class="recap-badge badge-gold">💰 ${lang === 'ar' ? 'دفع عند الاستلام' : 'Paiement à la livraison'}</span>
