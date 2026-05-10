@@ -8,10 +8,10 @@
   },
   "bundle": {
     "count": 4,
-    "price": 200,
+    "price": 220,
     "currency": "DH",
-    "title_ar": "اختر 4 عطور بـ 200 درهم فقط",
-    "title_fr": "Choisissez 4 parfums pour seulement 200 DH"
+    "title_ar": "اختر 4 عطور بـ 220 درهم فقط",
+    "title_fr": "Choisissez 4 parfums pour seulement 220 DH"
   },
   "cities": [
     "Casablanca", "Rabat", "Marrakech", "Fès", "Tanger", "Agadir",
@@ -533,7 +533,7 @@
   "testimonials": [
     { "name": "فاطمة الزهراء", "city": "الدار البيضاء", "rating": 5, "text_ar": "جودة استثنائية بسعر لا يصدق! اخترت 4 عطور وكلها رائعة جداً 🌹", "text_fr": "Qualité exceptionnelle à un prix incroyable! J'ai choisi 4 parfums et ils sont tous magnifiques 🌹" },
     { "name": "أمينة بنعلي", "city": "الرباط", "rating": 5, "text_ar": "التوصيل كان سريعاً والعطور أقوى من الأصلية. شكراً جزيلاً!", "text_fr": "La livraison était rapide et les parfums sont plus puissants que les originaux. Merci!" },
-    { "name": "خديجة العلوي", "city": "مراكش", "rating": 5, "text_ar": "ما شاء الله، 4 عطور بـ200 درهم فقط! لا مثيل لهم في المغرب 💎", "text_fr": "4 parfums pour 200 DH seulement! Rien de comparable au Maroc 💎" },
+    { "name": "خديجة العلوي", "city": "مراكش", "rating": 5, "text_ar": "ما شاء الله، 4 عطور بـ220 درهم فقط! لا مثيل لهم في المغرب 💎", "text_fr": "4 parfums pour 220 DH seulement! Rien de comparable au Maroc 💎" },
     { "name": "نوال حسيني", "city": "فاس", "rating": 5, "text_ar": "أنصح كل واحدة بالطلب من ênas، العطور ثابتة وراقية جداً ✨", "text_fr": "Je recommande ênas à toutes, les parfums sont tenaces et très raffinés ✨" },
     { "name": "مريم بوشناق", "city": "طنجة", "rating": 5, "text_ar": "طلبت للمرة الثالثة! لا أشتري العطور من أي مكان آخر 🌿", "text_fr": "Ma 3ème commande! Je n'achète plus mes parfums ailleurs 🌿" }
   ],
@@ -587,7 +587,7 @@
         "text_ar": "ميزانيتك؟",
         "text_fr": "Votre budget?",
         "options": [
-          { "value": "200", "label_ar": "200 درهم — 4 عطور 💛", "label_fr": "200 DH — 4 parfums 💛" }
+          { "value": "220", "label_ar": "220 درهم — 4 عطور 💛", "label_fr": "220 DH — 4 parfums 💛" }
         ]
       }
     ]
