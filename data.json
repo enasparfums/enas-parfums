@@ -70,11 +70,10 @@
       "name": "Zara Night II",
       "inspiration": "Zara Night Pour Homme II",
       "gender": "homme",
-      "volume": "50ml",
       "family": "boisé-épicé",
       "intensity": "modéré",
       "notes": { "top": "Lavande, Bergamote", "heart": "Cèdre, Vétiver", "base": "Musc, Ambre" },
-      "image": "images/homme/zaranight2.jpg"
+      "image": "https://ibb.co/Kzq1fGrq"
     },
     {
       "id": "h6",
