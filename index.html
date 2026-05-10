@@ -5,25 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Ênas Parfums — L'Essence de Luxe | عطور فاخرة</title>
   <meta name="description" content="اختر 4 عطور فاخرة بـ 200 درهم فقط مع توصيل مجاني في المغرب | Choisissez 4 parfums pour 200 DH avec livraison gratuite au Maroc">
-  <meta name="theme-color" content="#1a4a2e">
+  <meta name="theme-color" content="#0a0a0f">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Tajawal:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body dir="rtl">
 
 <!-- ── SPLASH ── -->
 <div id="splash">
   <img src="" id="splash-logo" alt="Ênas Parfums">
-  <p>L'ESSENCE DE LUXE</p>
+  <div class="splash-brand">
+    <h1>ênas</h1>
+    <p>L'ESSENCE DE LUXE</p>
+  </div>
 </div>
 
 <!-- ── NAVBAR ── -->
 <nav>
   <div class="nav-logo">
     <img src="" id="nav-logo" alt="Logo">
-    <span>ênas</span>
+    <span class="brand-name">ênas</span>
   </div>
   <div class="nav-actions">
     <div class="nav-badge" id="nav-badge">4 عطور بـ 200 درهم</div>
@@ -37,11 +40,19 @@
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <div class="hero-badge">L'Essence de Luxe — جوهر الفخامة</div>
-  <h1 id="hero-title" data-key="title">اختر 4 عطور بـ 200 درهم فقط</h1>
-  <div class="hero-subtitle" data-key="subtitle">Extraits de Parfum • 50ml رجال • 30ml نساء</div>
-  <div class="hero-price">200</div>
-  <div class="hero-price-label" data-key="price_label">درهم فقط لـ 4 عطور + توصيل مجاني</div>
+  <div class="hero-eyebrow">
+    <span>Extraits de Parfum • عطور فاخرة</span>
+  </div>
+  <h1 class="hero-title">
+    <span data-key="title"><em>اختر 4 عطور</em><br>بـ 200 درهم فقط</span>
+  </h1>
+  <div class="hero-subtitle" data-key="subtitle">50ml رجال • 30ml نساء • توصيل مجاني</div>
+
+  <div class="hero-price-block">
+    <div class="price-num"><span class="price-dh">DH</span>200</div>
+    <div class="price-label" data-key="price_label">لـ 4 عطور + توصيل مجاني في المغرب</div>
+  </div>
+
   <div class="hero-btns">
     <button class="btn-hero btn-homme" onclick="scrollToHomme()">
       👨 <span data-key="btn_homme">رجال</span>
@@ -50,20 +61,25 @@
       👩 <span data-key="btn_femme">نساء</span>
     </button>
   </div>
+
+  <div class="scroll-hint">
+    <span>اكتشف</span>
+  </div>
 </section>
 
 <!-- ── MARQUEE ── -->
 <div class="marquee-wrap">
   <div class="marquee-track" id="marquee-track">
-    <span>🎁 توصيل مجاني لجميع أنحاء المغرب 🇲🇦 • Livraison Gratuite • </span>
-    <span>🎁 توصيل مجاني لجميع أنحاء المغرب 🇲🇦 • Livraison Gratuite • </span>
+    <span>✦ توصيل مجاني لجميع أنحاء المغرب ✦ Livraison Gratuite au Maroc ✦ الدفع عند الاستلام ✦ Paiement à la livraison ✦</span>
+    <span>✦ توصيل مجاني لجميع أنحاء المغرب ✦ Livraison Gratuite au Maroc ✦ الدفع عند الاستلام ✦ Paiement à la livraison ✦</span>
   </div>
 </div>
 
 <!-- ── HOW IT WORKS ── -->
 <section class="steps-section">
-  <div class="section-title">كيف يعمل؟ / Comment ça marche ?</div>
-  <div class="section-sub">3 خطوات بسيطة / 3 étapes simples</div>
+  <span class="section-label">Comment ça marche</span>
+  <h2 class="section-title">3 خطوات بسيطة</h2>
+  <p class="section-sub">3 étapes simples pour recevoir vos parfums</p>
   <div class="steps-grid">
     <div class="step-card">
       <div class="step-num">1</div>
@@ -82,7 +98,7 @@
 
 <!-- ── QUIZ TRIGGER ── -->
 <button class="quiz-trigger" onclick="openQuiz()">
-  ✨ <span data-key="quiz_btn">ساعدني أختار</span>
+  ✦ <span data-key="quiz_btn">ساعدني أختار العطر المناسب</span>
 </button>
 
 <!-- ── TABS ── -->
@@ -106,16 +122,9 @@
 <!-- ── PRODUCTS ── -->
 <section class="products-section" id="products-section">
   <div class="search-bar">
-    <input
-      type="text"
-      class="search-input"
-      id="search-input"
-      placeholder="🔍 ابحث عن عطر..."
-    >
+    <input type="text" class="search-input" id="search-input" placeholder="🔍 ابحث عن عطر...">
   </div>
-  <div class="products-grid" id="products-grid">
-    <!-- Products rendered by JS -->
-  </div>
+  <div class="products-grid" id="products-grid"></div>
 </section>
 
 <!-- ── FINALIZE BTN ── -->
@@ -127,13 +136,15 @@
 
 <!-- ── TESTIMONIALS ── -->
 <section class="testimonials-section">
-  <div class="section-title" data-key="testi_title">ماذا يقول عملاؤنا</div>
+  <span class="section-label">Avis clients</span>
+  <h2 class="section-title" data-key="testi_title">ماذا يقول عملاؤنا</h2>
   <div class="testimonials-grid" id="testimonials-list"></div>
 </section>
 
 <!-- ── FOOTER ── -->
 <footer>
   <img src="" id="footer-logo" alt="Ênas Parfums">
+  <div class="footer-brand">ênas parfums</div>
   <div class="footer-links">
     <a href="https://instagram.com/enas_parfums" target="_blank" class="footer-link">📸</a>
     <a href="https://wa.me/212601533785" target="_blank" class="footer-link">💬</a>
@@ -150,9 +161,7 @@
     <div class="modal-handle"></div>
     <div class="modal-title" id="form-title">أكمل طلبك</div>
     <div class="modal-subtitle" id="form-sub">التوصيل مجاني — الدفع عند الاستلام</div>
-
     <div class="selection-summary" id="selection-summary"></div>
-
     <div class="form-group">
       <label class="form-label" id="label-name">الاسم الكامل</label>
       <input type="text" class="form-input" id="inp-name" placeholder="اكتب اسمك هنا...">
@@ -172,15 +181,13 @@
       <input type="text" class="form-input" id="inp-addr" placeholder="الحي، الشارع، رقم المنزل...">
     </div>
     <div class="form-group">
-      <label class="form-label" id="label-note">ملاحظات إضافية (اختياري)</label>
+      <label class="form-label" id="label-note">ملاحظات (اختياري)</label>
       <textarea class="form-textarea" id="inp-note" placeholder="أي ملاحظات للتوصيل..."></textarea>
     </div>
-
     <div class="form-info-boxes">
       <div class="info-box" id="info-delivery">🎁 التوصيل مجاني</div>
       <div class="info-box" id="info-cod">💰 الدفع عند الاستلام</div>
     </div>
-
     <button class="btn-submit" id="btn-send-wa" onclick="submitOrder()">
       📱 إرسال الطلب عبر واتساب
     </button>
@@ -193,21 +200,19 @@
   <div class="quiz-progress">
     <div class="quiz-progress-bar" id="quiz-progress-bar" style="width:0%"></div>
   </div>
-  <div id="quiz-content">
-    <!-- Rendered by JS -->
-  </div>
+  <div id="quiz-content"></div>
 </div>
 
 <!-- ── SCRIPTS ── -->
-<!-- Single merged JS file: ENAS_DATA + IMAGES + App Logic -->
 <script src="app.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    // Inject logo images once IMAGES object is loaded
-    const logoSrc = (typeof IMAGES !== 'undefined' && IMAGES['logo']) ? IMAGES['logo'] : '';
+    const logoSrc = (typeof PRODUCT_IMAGES !== 'undefined' && PRODUCT_IMAGES['logo'])
+      ? PRODUCT_IMAGES['logo']
+      : (typeof IMAGES !== 'undefined' && IMAGES['logo']) ? IMAGES['logo'] : '';
     ['splash-logo', 'nav-logo', 'footer-logo'].forEach(id => {
       const el = document.getElementById(id);
-      if (el) el.src = logoSrc;
+      if (el && logoSrc) el.src = logoSrc;
     });
   });
 </script>
