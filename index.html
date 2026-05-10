@@ -2,219 +2,398 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Ênas Parfums — L'Essence de Luxe | عطور فاخرة</title>
-  <meta name="description" content="اختر 4 عطور فاخرة بـ 200 درهم فقط مع توصيل مجاني في المغرب | Choisissez 4 parfums pour 200 DH avec livraison gratuite au Maroc">
-  <meta name="theme-color" content="#0a0a0f">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a4a2e">
+  <meta name="description" content="Ênas Parfums — اختر 4 عطور بـ 200 درهم فقط. Extraits de parfum 50ml Homme & 30ml Femme. Livraison gratuite partout au Maroc.">
+  <meta property="og:title" content="Ênas Parfums — L'Essence de Luxe">
+  <meta property="og:description" content="4 parfums pour 200 DH • Livraison gratuite 🇲🇦">
+  <meta property="og:image" content="images/logo.jpg">
+  <title>Ênas Parfums — جوهر الفخامة</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Tajawal:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- PWA Manifest inline -->
+  <link rel="manifest" href="manifest.json">
 </head>
-<body dir="rtl">
+<body>
 
-<!-- ── SPLASH ── -->
-<div id="splash">
-  <img src="" id="splash-logo" alt="Ênas Parfums">
-  <div class="splash-brand">
-    <h1>ênas</h1>
-    <p>L'ESSENCE DE LUXE</p>
+  <!-- ════════════════════════════════
+       INTRO SPLASH
+  ════════════════════════════════ -->
+  <div id="intro-splash">
+    <div class="intro-logo">
+      <img src="images/logo.jpg" alt="Ênas Parfums" onerror="this.style.display='none'">
+    </div>
+    <div style="
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a4a2e 50%, #c4547a 50%);
+      display: flex; align-items: center; justify-content: center;
+      border: 3px solid #b8973a;
+      box-shadow: 0 0 60px rgba(184,151,58,0.4);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.6rem;
+      color: #d4ad50;
+      position: absolute;
+    " id="splash-logo-fallback">ê</div>
+    <div class="intro-tagline">L'Essence de Luxe • جوهر الفخامة</div>
+    <div class="intro-dots">
+      <div class="intro-dot"></div>
+      <div class="intro-dot"></div>
+      <div class="intro-dot"></div>
+    </div>
   </div>
-</div>
 
-<!-- ── NAVBAR ── -->
-<nav>
-  <div class="nav-logo">
-    <img src="" id="nav-logo" alt="Logo">
-    <span class="brand-name">ênas</span>
+  <!-- ════════════════════════════════
+       NAVBAR
+  ════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-circle">
+        <img src="images/logo.jpg" alt="Ênas" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a4a2e 50%,#c4547a 50%)'">
+      </div>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">ênas</span>
+        <span class="nav-brand-sub">parfums</span>
+      </div>
+    </a>
+
+    <div class="nav-center">
+      <div class="nav-badge-free">
+        🚚 <span data-ar="توصيل مجاني" data-fr="Livraison Gratuite">توصيل مجاني</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <div class="nav-cart-btn" id="nav-cart-btn" title="Panier">
+        🛍️
+        <span class="cart-count-badge" id="cart-badge">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════
+       TICKER BANNER
+  ════════════════════════════════ -->
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="ticker-track"></div>
   </div>
-  <div class="nav-actions">
-    <div class="nav-badge" id="nav-badge">4 عطور بـ 200 درهم</div>
-    <button class="lang-switcher" id="lang-switcher" onclick="toggleLang()">FR</button>
-    <a href="https://wa.me/212601533785" target="_blank" class="nav-wa">
-      <span>📱</span>
-      <span id="wa-contact-text">واتساب</span>
+
+  <!-- ════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-leaves"></div>
+    <div class="hero-glow-green"></div>
+    <div class="hero-glow-rose"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-icon">🌿</span>
+        <span class="hero-badge-text">L'Essence de Luxe — جوهر الفخامة</span>
+        <span class="hero-badge-icon">✨</span>
+      </div>
+
+      <h1 class="hero-title" data-ar="اختر 4 عطور بـ 200 درهم فقط" data-fr="Choisissez 4 parfums pour seulement 200 DH">
+        اختر 4 عطور بـ 200 درهم فقط
+      </h1>
+      <div class="hero-title-fr">Choisissez 4 parfums pour seulement 200 DH</div>
+      <p class="hero-subtitle">Extraits de Parfum • 50ml Homme • 30ml Femme</p>
+
+      <div class="hero-price-block">
+        <span class="hero-price">200</span>
+        <span class="hero-price-label">DH</span>
+      </div>
+
+      <div class="hero-buttons">
+        <button class="hero-btn hero-btn-homme" id="hero-btn-homme">
+          👨 <span data-ar="رجال" data-fr="Homme">رجال</span>
+        </button>
+        <button class="hero-btn hero-btn-femme" id="hero-btn-femme">
+          👩 <span data-ar="نساء" data-fr="Femme">نساء</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       HOW IT WORKS
+  ════════════════════════════════ -->
+  <section id="how-it-works">
+    <span class="section-label">كيف يعمل • Comment ça marche</span>
+    <h2 class="section-title">
+      <span data-ar="3 خطوات بسيطة" data-fr="3 étapes simples">3 خطوات بسيطة</span>
+    </h2>
+
+    <div class="steps-grid">
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-number">1</div>
+        <span class="step-icon">🌿</span>
+        <div class="step-title-ar">اختر 4 عطور</div>
+        <div class="step-title-fr">Choisissez 4 parfums</div>
+      </div>
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-number">2</div>
+        <span class="step-icon">📝</span>
+        <div class="step-title-ar">أدخل معلوماتك</div>
+        <div class="step-title-fr">Remplissez le formulaire</div>
+      </div>
+      <div class="step-card reveal reveal-delay-3">
+        <div class="step-number">3</div>
+        <span class="step-icon">🚚</span>
+        <div class="step-title-ar">استلم مجاناً</div>
+        <div class="step-title-fr">Recevez gratuitement</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       STICKY BAR (TABS + COUNTER)
+  ════════════════════════════════ -->
+  <div id="sticky-bar">
+    <div class="tabs-row">
+      <button class="tab-btn active-homme" id="tab-homme">
+        👨 <span data-ar="رجال — 50ml" data-fr="Homme — 50ml">رجال — 50ml</span>
+      </button>
+      <button class="tab-btn" id="tab-femme">
+        👩 <span data-ar="نساء — 30ml" data-fr="Femme — 30ml">نساء — 30ml</span>
+      </button>
+    </div>
+    <div class="counter-row">
+      <div class="counter-dots">
+        <div class="counter-dot"></div>
+        <div class="counter-dot"></div>
+        <div class="counter-dot"></div>
+        <div class="counter-dot"></div>
+      </div>
+      <span class="counter-text" id="counter-text">
+        <span data-ar="اخترت 0/4 عطور" data-fr="0/4 parfums sélectionnés">اخترت 0/4 عطور</span>
+      </span>
+      <span class="counter-price">200 DH</span>
+      <button class="finalize-btn" id="finalize-btn">
+        <span data-ar="أكمل الطلب" data-fr="Finaliser">أكمل الطلب</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       SEARCH & FILTERS
+  ════════════════════════════════ -->
+  <div class="search-filter-bar">
+    <div class="search-input-wrap">
+      <input class="search-input" id="search-input" type="text"
+             placeholder="ابحث عن عطر...">
+      <span class="search-icon">🔍</span>
+    </div>
+
+    <button class="filter-btn" data-filter="floral" data-filter-type="family">🌸 <span data-ar="زهري" data-fr="Floral">زهري</span></button>
+    <button class="filter-btn" data-filter="oriental" data-filter-type="family">🕌 <span data-ar="عودي" data-fr="Oriental">عودي</span></button>
+    <button class="filter-btn" data-filter="boisé" data-filter-type="family">🌳 <span data-ar="خشبي" data-fr="Boisé">خشبي</span></button>
+    <button class="filter-btn" data-filter="aquatique" data-filter-type="family">💨 <span data-ar="فريش" data-fr="Frais">فريش</span></button>
+    <button class="filter-btn" data-filter="fort" data-filter-type="intensity">💎 <span data-ar="قوي" data-fr="Fort">قوي</span></button>
+    <button class="filter-btn" data-filter="léger" data-filter-type="intensity">🌬️ <span data-ar="خفيف" data-fr="Léger">خفيف</span></button>
+  </div>
+
+  <!-- ════════════════════════════════
+       PRODUCTS GRID
+  ════════════════════════════════ -->
+  <section id="products-section">
+    <div class="products-grid" id="products-grid">
+      <!-- Products rendered by JS -->
+      <div style="grid-column: 1/-1; text-align:center; padding:60px; color:#9a9590;">
+        <div style="font-size:2rem;margin-bottom:12px;">🌿</div>
+        <div>جاري تحميل العطور... / Chargement des parfums...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       ORDER SECTION
+  ════════════════════════════════ -->
+  <section id="order-section">
+    <div class="order-container">
+      <div class="order-header reveal">
+        <span class="section-label">اكتمل اختيارك • Sélection complète</span>
+        <h2 class="section-title">
+          <span data-ar="أكمل طلبك" data-fr="Finalisez votre commande">أكمل طلبك</span>
+        </h2>
+      </div>
+      <div id="order-form">
+        <!-- Built by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       QUIZ SECTION
+  ════════════════════════════════ -->
+  <section id="quiz-section">
+    <span class="section-label" style="color: var(--gold);">اكتشف عطرك • Découvrez votre parfum</span>
+    <h2 class="quiz-section-title reveal" data-ar="اختبار العطر المثالي" data-fr="Test du parfum idéal">
+      اختبار العطر المثالي
+    </h2>
+    <p class="quiz-subtitle" data-ar="أجب على 5 أسئلة لنقترح عليك أفضل العطور" data-fr="Répondez à 5 questions pour découvrir vos parfums idéaux">
+      أجب على 5 أسئلة لنقترح عليك أفضل العطور
+    </p>
+    <div id="quiz-container">
+      <!-- Built by JS -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       TESTIMONIALS
+  ════════════════════════════════ -->
+  <section id="testimonials">
+    <div style="text-align:center; margin-bottom:40px;">
+      <span class="section-label">آراء العملاء • Avis clients</span>
+      <h2 class="section-title reveal" data-ar="ماذا يقول عملاؤنا؟" data-fr="Ce que disent nos clients">
+        ماذا يقول عملاؤنا؟
+      </h2>
+    </div>
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-track" id="testimonials-track">
+        <!-- Built by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       DELIVERY SECTION
+  ════════════════════════════════ -->
+  <div class="delivery-section">
+    <div class="delivery-grid">
+      <div class="delivery-item reveal reveal-delay-1">
+        <div class="delivery-icon">🎁</div>
+        <div class="delivery-title" data-ar="توصيل مجاني" data-fr="Livraison Gratuite">توصيل مجاني</div>
+        <div class="delivery-sub" data-ar="لجميع أنحاء المغرب 🇲🇦" data-fr="Partout au Maroc 🇲🇦">لجميع أنحاء المغرب 🇲🇦</div>
+      </div>
+      <div class="delivery-item reveal reveal-delay-2">
+        <div class="delivery-icon">💰</div>
+        <div class="delivery-title" data-ar="دفع عند الاستلام" data-fr="Paiement à la livraison">دفع عند الاستلام</div>
+        <div class="delivery-sub" data-ar="لا حاجة للدفع المسبق" data-fr="Aucun paiement en avance">لا حاجة للدفع المسبق</div>
+      </div>
+      <div class="delivery-item reveal reveal-delay-3">
+        <div class="delivery-icon">⏱️</div>
+        <div class="delivery-title" data-ar="2-5 أيام عمل" data-fr="2-5 jours ouvrables">2-5 أيام عمل</div>
+        <div class="delivery-sub" data-ar="توصيل سريع لباب منزلك" data-fr="Livraison rapide à domicile">توصيل سريع لباب منزلك</div>
+      </div>
+      <div class="delivery-item reveal">
+        <div class="delivery-icon">💎</div>
+        <div class="delivery-title" data-ar="جودة مضمونة" data-fr="Qualité garantie">جودة مضمونة</div>
+        <div class="delivery-sub" data-ar="عطور أصيلة فاخرة" data-fr="Parfums authentiques de luxe">عطور أصيلة فاخرة</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       INSTAGRAM SECTION
+  ════════════════════════════════ -->
+  <section id="instagram-section">
+    <span class="section-label">تابعنا • Suivez-nous</span>
+    <h3 class="instagram-handle">@enas_parfums</h3>
+    <p class="insta-cta" data-ar="تابعنا على إنستغرام لأحدث العروض والعطور" data-fr="Suivez-nous sur Instagram pour les dernières offres">
+      تابعنا على إنستغرام لأحدث العروض والعطور
+    </p>
+    <a href="https://instagram.com/enas_parfums" target="_blank" class="insta-btn">
+      Instagram @enas_parfums
+    </a>
+  </section>
+
+  <!-- ════════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer id="footer">
+    <a href="#" class="footer-logo">
+      <div class="footer-logo-img">
+        <img src="images/logo.jpg" alt="Ênas" onerror="this.style.display='none'">
+      </div>
+      <span class="footer-brand">ênas parfums</span>
+    </a>
+    <p class="footer-tagline">L'Essence de Luxe — جوهر الفخامة</p>
+
+    <div class="footer-links">
+      <a href="https://wa.me/212601533785" target="_blank" class="footer-link">
+        💬 WhatsApp
+      </a>
+      <a href="https://instagram.com/enas_parfums" target="_blank" class="footer-link">
+        📷 Instagram
+      </a>
+      <a href="#products-section" class="footer-link">
+        🌿 <span data-ar="المجموعة" data-fr="Collection">المجموعة</span>
+      </a>
+    </div>
+
+    <p class="footer-copy">
+      © 2025 Ênas Parfums — Tous droits réservés
+      <br>
+      <span style="color:var(--gold);font-size:0.85rem">Made with ❤️ in Morocco 🇲🇦</span>
+    </p>
+  </footer>
+
+  <!-- ════════════════════════════════
+       PRODUCT MODAL
+  ════════════════════════════════ -->
+  <div id="product-modal">
+    <div class="modal-inner">
+      <div class="modal-close">
+        <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-img-wrap">
+        <img id="modal-img" src="" alt="">
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Built by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       WHATSAPP FLOAT
+  ════════════════════════════════ -->
+  <div id="whatsapp-float">
+    <div class="whatsapp-tooltip" data-ar="تواصل معنا عبر واتساب" data-fr="Contactez-nous sur WhatsApp">
+      تواصل معنا عبر واتساب
+    </div>
+    <a href="https://wa.me/212601533785" target="_blank" class="whatsapp-btn" title="WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
     </a>
   </div>
-</nav>
 
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-eyebrow">
-    <span>Extraits de Parfum • عطور فاخرة</span>
-  </div>
-  <h1 class="hero-title">
-    <span data-key="title"><em>اختر 4 عطور</em><br>بـ 200 درهم فقط</span>
-  </h1>
-  <div class="hero-subtitle" data-key="subtitle">50ml رجال • 30ml نساء • توصيل مجاني</div>
+  <!-- Back to top -->
+  <a href="#" id="back-top" title="Retour en haut">↑</a>
 
-  <div class="hero-price-block">
-    <div class="price-num"><span class="price-dh">DH</span>200</div>
-    <div class="price-label" data-key="price_label">لـ 4 عطور + توصيل مجاني في المغرب</div>
-  </div>
+  <!-- Toast -->
+  <div id="toast"></div>
 
-  <div class="hero-btns">
-    <button class="btn-hero btn-homme" onclick="scrollToHomme()">
-      👨 <span data-key="btn_homme">رجال</span>
-    </button>
-    <button class="btn-hero btn-femme" onclick="scrollToFemme()">
-      👩 <span data-key="btn_femme">نساء</span>
-    </button>
-  </div>
+  <!-- Script -->
+  <script src="app.js"></script>
 
-  <div class="scroll-hint">
-    <span>اكتشف</span>
-  </div>
-</section>
-
-<!-- ── MARQUEE ── -->
-<div class="marquee-wrap">
-  <div class="marquee-track" id="marquee-track">
-    <span>✦ توصيل مجاني لجميع أنحاء المغرب ✦ Livraison Gratuite au Maroc ✦ الدفع عند الاستلام ✦ Paiement à la livraison ✦</span>
-    <span>✦ توصيل مجاني لجميع أنحاء المغرب ✦ Livraison Gratuite au Maroc ✦ الدفع عند الاستلام ✦ Paiement à la livraison ✦</span>
-  </div>
-</div>
-
-<!-- ── HOW IT WORKS ── -->
-<section class="steps-section">
-  <span class="section-label">Comment ça marche</span>
-  <h2 class="section-title">3 خطوات بسيطة</h2>
-  <p class="section-sub">3 étapes simples pour recevoir vos parfums</p>
-  <div class="steps-grid">
-    <div class="step-card">
-      <div class="step-num">1</div>
-      <div class="step-text" data-key="step1">اختر 4 عطور</div>
-    </div>
-    <div class="step-card">
-      <div class="step-num">2</div>
-      <div class="step-text" data-key="step2">أدخل معلوماتك</div>
-    </div>
-    <div class="step-card">
-      <div class="step-num">3</div>
-      <div class="step-text" data-key="step3">استلم مجاناً</div>
-    </div>
-  </div>
-</section>
-
-<!-- ── QUIZ TRIGGER ── -->
-<button class="quiz-trigger" onclick="openQuiz()">
-  ✦ <span data-key="quiz_btn">ساعدني أختار العطر المناسب</span>
-</button>
-
-<!-- ── TABS ── -->
-<div class="tabs-wrap" id="tabs-section">
-  <button class="tab-btn active-homme" id="tab-homme">👨 رجال</button>
-  <button class="tab-btn" id="tab-femme">👩 نساء</button>
-</div>
-
-<!-- ── COUNTER ── -->
-<div class="counter-bar">
-  <div class="counter-dots" id="counter-dots">
-    <div class="counter-dot"></div>
-    <div class="counter-dot"></div>
-    <div class="counter-dot"></div>
-    <div class="counter-dot"></div>
-  </div>
-  <div class="counter-text" id="counter-text">اخترت 0/4 عطور</div>
-  <div class="counter-price">200 DH</div>
-</div>
-
-<!-- ── PRODUCTS ── -->
-<section class="products-section" id="products-section">
-  <div class="search-bar">
-    <input type="text" class="search-input" id="search-input" placeholder="🔍 ابحث عن عطر...">
-  </div>
-  <div class="products-grid" id="products-grid"></div>
-</section>
-
-<!-- ── FINALIZE BTN ── -->
-<div class="finalize-wrap" id="finalize-wrap">
-  <button class="btn-finalize" id="btn-finalize" onclick="openForm()" disabled>
-    اختر 4 عطور للمتابعة (0/4)
-  </button>
-</div>
-
-<!-- ── TESTIMONIALS ── -->
-<section class="testimonials-section">
-  <span class="section-label">Avis clients</span>
-  <h2 class="section-title" data-key="testi_title">ماذا يقول عملاؤنا</h2>
-  <div class="testimonials-grid" id="testimonials-list"></div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer>
-  <img src="" id="footer-logo" alt="Ênas Parfums">
-  <div class="footer-brand">ênas parfums</div>
-  <div class="footer-links">
-    <a href="https://instagram.com/enas_parfums" target="_blank" class="footer-link">📸</a>
-    <a href="https://wa.me/212601533785" target="_blank" class="footer-link">💬</a>
-  </div>
-  <p data-key="footer_copy">© 2024 Ênas Parfums — L'Essence de Luxe</p>
-</footer>
-
-<!-- ── WHATSAPP FLOAT ── -->
-<a href="https://wa.me/212601533785" target="_blank" class="wa-float" title="WhatsApp">📱</a>
-
-<!-- ── FORM MODAL ── -->
-<div class="modal-overlay hidden" id="form-modal">
-  <div class="modal-sheet">
-    <div class="modal-handle"></div>
-    <div class="modal-title" id="form-title">أكمل طلبك</div>
-    <div class="modal-subtitle" id="form-sub">التوصيل مجاني — الدفع عند الاستلام</div>
-    <div class="selection-summary" id="selection-summary"></div>
-    <div class="form-group">
-      <label class="form-label" id="label-name">الاسم الكامل</label>
-      <input type="text" class="form-input" id="inp-name" placeholder="اكتب اسمك هنا...">
-    </div>
-    <div class="form-group">
-      <label class="form-label" id="label-phone">رقم الهاتف</label>
-      <input type="tel" class="form-input" id="inp-phone" placeholder="06XXXXXXXX">
-    </div>
-    <div class="form-group">
-      <label class="form-label" id="label-city">المدينة</label>
-      <select class="form-select" id="sel-city">
-        <option value="">اختر مدينتك</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label class="form-label" id="label-addr">العنوان الكامل</label>
-      <input type="text" class="form-input" id="inp-addr" placeholder="الحي، الشارع، رقم المنزل...">
-    </div>
-    <div class="form-group">
-      <label class="form-label" id="label-note">ملاحظات (اختياري)</label>
-      <textarea class="form-textarea" id="inp-note" placeholder="أي ملاحظات للتوصيل..."></textarea>
-    </div>
-    <div class="form-info-boxes">
-      <div class="info-box" id="info-delivery">🎁 التوصيل مجاني</div>
-      <div class="info-box" id="info-cod">💰 الدفع عند الاستلام</div>
-    </div>
-    <button class="btn-submit" id="btn-send-wa" onclick="submitOrder()">
-      📱 إرسال الطلب عبر واتساب
-    </button>
-  </div>
-</div>
-
-<!-- ── QUIZ MODAL ── -->
-<div class="quiz-modal hidden" id="quiz-modal">
-  <button class="quiz-close" onclick="closeQuiz()">✕</button>
-  <div class="quiz-progress">
-    <div class="quiz-progress-bar" id="quiz-progress-bar" style="width:0%"></div>
-  </div>
-  <div id="quiz-content"></div>
-</div>
-
-<!-- ── SCRIPTS ── -->
-<script src="app.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const logoSrc = (typeof PRODUCT_IMAGES !== 'undefined' && PRODUCT_IMAGES['logo'])
-      ? PRODUCT_IMAGES['logo']
-      : (typeof IMAGES !== 'undefined' && IMAGES['logo']) ? IMAGES['logo'] : '';
-    ['splash-logo', 'nav-logo', 'footer-logo'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el && logoSrc) el.src = logoSrc;
+  <!-- Keyboard shortcut: ESC closes modal -->
+  <script>
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
     });
-  });
-</script>
+
+    // Image lazy loading fallback & click to open modal
+    document.addEventListener('click', (e) => {
+      const card = e.target.closest('.product-card');
+      if (!card) return;
+      if (e.target.closest('.product-wishlist')) return;
+      // Long press / info click — single tap handled by onclick attribute in rendered cards
+    });
+  </script>
 </body>
 </html>
