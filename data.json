@@ -30,7 +30,7 @@
       "family": "oriental",
       "intensity": "fort",
       "notes": { "top": "Bergamote, Cardamome", "heart": "Rose, Oud", "base": "Musc, Ambre" },
-      "image": "images/homme/exotique.jpg"
+      "image": "https://i.postimg.cc/T342b1FB/exotique-jpg.jpg"
     },
     {
       "id": "h2",
@@ -41,7 +41,7 @@
       "family": "boisé",
       "intensity": "fort",
       "notes": { "top": "Sauge, Genièvre", "heart": "Tonka, Cacao", "base": "Vétiver, Cèdre" },
-      "image": "images/homme/badboy.jpg"
+      "image": "https://i.postimg.cc/Z5RK0psS/badboy-jpg.jpg"
     },
     {
       "id": "h3",
@@ -52,7 +52,7 @@
       "family": "aromatique",
       "intensity": "modéré",
       "notes": { "top": "Agrumes, Poivre", "heart": "Iris, Cuir", "base": "Cèdre, Musc" },
-      "image": "images/homme/imperialvalley.jpg"
+      "image": "https://i.postimg.cc/VkVstv28/imperialvalley-jpg.jpg"
     },
     {
       "id": "h4",
@@ -63,7 +63,7 @@
       "family": "floral-ambré",
       "intensity": "fort",
       "notes": { "top": "Jasmin, Safran", "heart": "Ambre, Cèdre", "base": "Résine, Musc" },
-      "image": "images/homme/baccaratrougeh.jpg"
+      "image": "https://i.postimg.cc/L8X6hLQS/baccaratrougeh-jpg.jpg"
     },
     {
       "id": "h5",
@@ -73,7 +73,7 @@
       "family": "boisé-épicé",
       "intensity": "modéré",
       "notes": { "top": "Lavande, Bergamote", "heart": "Cèdre, Vétiver", "base": "Musc, Ambre" },
-      "image": "https://i.ibb.co/HTGJSbcn/sauvage-jpg.jpg"
+      "image": "https://i.postimg.cc/XYzN5qtr/zaranight2-jpg.jpg"
     },
     {
       "id": "h6",
@@ -84,7 +84,7 @@
       "family": "aquatique",
       "intensity": "léger",
       "notes": { "top": "Bergamote, Eau marine", "heart": "Géranium, Patchouli", "base": "Musc, Incens" },
-      "image": "images/homme/acquadigio.jpg"
+      "image": "https://i.postimg.cc/6p35Tnbx/acquadigio-jpg.jpg"
     },
     {
       "id": "h7",
@@ -95,7 +95,7 @@
       "family": "oriental-boisé",
       "intensity": "fort",
       "notes": { "top": "Mandarine, Poivre", "heart": "Sauge, Hédione", "base": "Miel, Patchouli" },
-      "image": "images/homme/scandal.jpg"
+      "image": "https://i.postimg.cc/rwPy4s7F/scandal-jpg.jpg"
     },
     {
       "id": "h8",
@@ -106,7 +106,7 @@
       "family": "oriental-épicé",
       "intensity": "fort",
       "notes": { "top": "Lavande, Menthe", "heart": "Cannelle, Miel", "base": "Vanille, Musc" },
-      "image": "images/homme/lemaleelixir.jpg"
+      "image": "https://i.postimg.cc/pL6Vjr3x/lemaleelixir-jpg.jpg"
     },
     {
       "id": "h9",
@@ -117,7 +117,7 @@
       "family": "oriental-fougère",
       "intensity": "fort",
       "notes": { "top": "Menthe, Pomme, Citron", "heart": "Fève tonka, Géranium", "base": "Vanille, Vétiver" },
-      "image": "images/homme/versaceeros.jpg"
+      "image": "https://i.postimg.cc/QdyN7CvM/versaceeros-jpg.jpg"
     },
     {
       "id": "h10",
@@ -139,7 +139,7 @@
       "family": "floral-boisé",
       "intensity": "fort",
       "notes": { "top": "Lavande, Poire", "heart": "Iris, Ambrette", "base": "Vétiver, Cèdre" },
-      "image": "images/homme/diorhomme.jpg"
+      "image": "https://i.postimg.cc/zGcDhv6Q/bleu-Chanel-jpg.jpg"
     },
     {
       "id": "h12",
@@ -161,7 +161,7 @@
       "family": "oriental-boisé",
       "intensity": "modéré",
       "notes": { "top": "Mandarine, Pamplemousse", "heart": "Rose, Menthe", "base": "Cuir, Patchouli" },
-      "image": "images/homme/onemillion.jpg"
+      "image": "https://i.postimg.cc/YCs2F0TM/onemillion-jpg.jpg"
     },
     {
       "id": "h14",
@@ -172,7 +172,7 @@
       "family": "oriental-fougère",
       "intensity": "fort",
       "notes": { "top": "Poire, Lavande", "heart": "Vanille, Jasmin", "base": "Musc, Cèdre" },
-      "image": "images/homme/ultramale.jpg"
+      "image": "https://i.postimg.cc/g2Tchj12/ultramale-jpg.jpg"
     },
     {
       "id": "h15",
@@ -183,7 +183,7 @@
       "family": "oriental-épicé",
       "intensity": "fort",
       "notes": { "top": "Fenouil, Sauge", "heart": "Tonka, Fève", "base": "Vanille, Ambre" },
-      "image": "images/homme/youintensely.jpg"
+      "image": "https://i.postimg.cc/rwPy4s7s/youintensely-jpg.jpg"
     },
     {
       "id": "h16",
@@ -194,7 +194,7 @@
       "family": "aromatique-épicé",
       "intensity": "fort",
       "notes": { "top": "Bergamote, Poivre", "heart": "Lavande, Géranium", "base": "Ambroxan, Cèdre" },
-      "image": "images/homme/sauvage.jpg"
+      "image": "https://i.postimg.cc/cLb13CP1/sauvage-jpg.jpg"
     },
     {
       "id": "h17",
@@ -205,7 +205,7 @@
       "family": "oud-fruité",
       "intensity": "fort",
       "notes": { "top": "Maracuja, Fruits tropicaux", "heart": "Oud, Rose", "base": "Musc, Santal" },
-      "image": "images/homme/oudmaracuja.jpg"
+      "image": "https://i.postimg.cc/g2Tchj1z/oudmaracuja-jpg.jpg"
     },
     {
       "id": "h18",
@@ -216,7 +216,7 @@
       "family": "oriental-oud",
       "intensity": "fort",
       "notes": { "top": "Safran, Cannelle", "heart": "Oud, Rose", "base": "Ambre, Musc doré" },
-      "image": "images/homme/ghubardahab.jpg"
+      "image": "https://i.postimg.cc/K8HcTjwd/ghubardahab-jpg.jpg"
     },
     {
       "id": "h19",
@@ -227,7 +227,7 @@
       "family": "oriental-boisé",
       "intensity": "fort",
       "notes": { "top": "Bergamote, Cardamome", "heart": "Iris, Géranium", "base": "Oud, Encens" },
-      "image": "images/homme/amouageguidance.jpg"
+      "image": "https://i.postimg.cc/FHRs13CQ/amouageguidance-jpg.jpg"
     },
     {
       "id": "h20",
@@ -238,7 +238,7 @@
       "family": "aquatique-boisé",
       "intensity": "léger",
       "notes": { "top": "Yuzu, Gingembre", "heart": "Cèdre, Vétiver", "base": "Musc, Ambre" },
-      "image": "images/homme/imagination.jpg"
+      "image": "https://i.postimg.cc/HkhWMnFD/imagination-jpg.jpg"
     }
   ],
   "perfumes_femme": [
