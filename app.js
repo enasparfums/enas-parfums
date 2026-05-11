@@ -851,3 +851,27 @@ window.switchTab = switchTab;
 
 /* ── Start ── */
 document.addEventListener('DOMContentLoaded', loadData);
+/* ── Showcase Buttons ── */
+(function initShowcase() {
+  function bindShowcase() {
+    const btnFemme = document.getElementById('showcase-btn-femme');
+    const btnHomme = document.getElementById('showcase-btn-homme');
+    if (btnFemme) {
+      btnFemme.addEventListener('click', function() {
+        switchTab('femme');
+        document.getElementById('products-section').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+    if (btnHomme) {
+      btnHomme.addEventListener('click', function() {
+        switchTab('homme');
+        document.getElementById('products-section').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindShowcase);
+  } else {
+    bindShowcase();
+  }
+})();
